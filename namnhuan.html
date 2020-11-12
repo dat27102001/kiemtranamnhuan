@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nam = parseInt(prompt("so nam"))
+
+    let lanamnhuan = false;
+
+    let isDivby4 = nam % 4 == 0;
+    if (isDivby4){
+        let isDivby100  = nam % 100 == 0;
+        if (isDivby100){
+            let isDivby400  = nam % 400 == 0;
+            if (isDivby400){
+                let lanamnhuan = true;
+            }
+        } else {
+            lanamnhuan=true;
+        }
+    }
+    if (lanamnhuan){
+        alert(nam + " la nam nhuan")
+    }else {
+        alert((nam + " la nam khong nhuan"))
+    }
+</script>
+</body>
+</html>
